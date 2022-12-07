@@ -569,7 +569,7 @@ TROLLSYS.OPTIONS = {
             for k,v in ipairs(value.newValue) do
                 if !v:IsPlayer() then continue end
                 timer.Simple(value.TIME, function()
-                    net.Start("TrollSystem.CallOnClient")
+                    net.Start("TROLLSYS.CallOnClient")
                         net.WriteUInt(actionID, 4)
                         net.WriteUInt(duration,32)
                     net.Send(v)
